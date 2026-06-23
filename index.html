@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JSON to TOON Converter — Save LLM Tokens (Free Online)</title>
+  <meta name="description" content="Free JSON to TOON converter. Paste JSON to convert it to TOON (Token-Oriented Object Notation) and see how many LLM tokens you save versus raw JSON. Runs entirely in your browser, nothing uploaded.">
+  <link rel="canonical" href="https://toon-converter.github.io/">
+  <meta name="theme-color" content="#7c3aed">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="generator" content="tool-factory">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2032%2032'%3E%3Crect%20width%3D'32'%20height%3D'32'%20rx%3D'6'%20fill%3D'%237c3aed'%2F%3E%3Ctext%20x%3D'16'%20y%3D'22'%20font-size%3D'18'%20font-family%3D'sans-serif'%20fill%3D'white'%20text-anchor%3D'middle'%3EJSON%20TO%20TOON%20CONVERTER%3C%2Ftext%3E%3C%2Fsvg%3E">
+  <!-- SEO: OpenGraph + Twitter + JSON-LD structured data -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://toon-converter.github.io/">
+  <meta property="og:title" content="JSON to TOON Converter — Save LLM Tokens (Free Online)">
+  <meta property="og:description" content="Free JSON to TOON converter. Paste JSON to convert it to TOON (Token-Oriented Object Notation) and see how many LLM tokens you save versus raw JSON. Runs entirely in your browser, nothing uploaded.">
+  <meta property="og:site_name" content="JSON to TOON Converter">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="JSON to TOON Converter — Save LLM Tokens (Free Online)">
+  <meta name="twitter:description" content="Free JSON to TOON converter. Paste JSON to convert it to TOON (Token-Oriented Object Notation) and see how many LLM tokens you save versus raw JSON. Runs entirely in your browser, nothing uploaded.">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "JSON to TOON Converter",
+      "url": "https://toon-converter.github.io/",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Any (web browser)",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Free JSON to TOON converter. Paste JSON to convert it to TOON (Token-Oriented Object Notation) and see how many LLM tokens you save versus raw JSON. Runs entirely in your browser, nothing uploaded.",
+      "author": {
+        "@type": "Organization",
+        "name": "Tool Factory"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is TOON?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "TOON (Token-Oriented Object Notation) is a compact data format designed to represent JSON using fewer LLM tokens. It is indentation-based and encodes arrays of uniform objects as a header plus rows, avoiding repeated keys."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why convert JSON to TOON?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "LLMs charge by token and have limited context windows. TOON conveys the same data in fewer tokens, so you can include more data per prompt and reduce cost — particularly for tabular or list-heavy JSON."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much do I save?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on your data. Arrays of many similar objects save the most because keys aren't repeated per row; deeply nested or highly irregular data saves less. The tool shows an estimate for your specific input."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my JSON uploaded?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Conversion happens entirely in your browser. Your data is never sent to a server, so it's safe for private payloads."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the token count exact?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It's a close estimate (roughly 4 characters per token), used to compare JSON and TOON on equal footing. Actual counts vary by model tokenizer, but the relative savings are representative."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to use JSON to TOON Converter",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "text": "Paste your JSON into the input box, or drop a .json file."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "text": "The TOON output and the estimated token savings appear automatically."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "text": "Review the percentage of tokens saved versus the original JSON."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "text": "Copy or download the TOON to use it in your prompt."
+        }
+      ]
+    }
+  ]
+}
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-vibe="">
+  <a class="skip" href="#tool">Skip to the tool</a>
+
+  <main class="wrap">
+    <header class="hero">
+      <span class="logo-mark" aria-hidden="true"></span>
+      <h1>JSON to TOON Converter</h1>
+      <p class="tagline">Convert JSON to TOON and cut the tokens you spend feeding data to LLMs — right in your browser.</p>
+      <p class="trust">Free · No sign-up · Runs entirely in your browser</p>
+    </header>
+
+    <!-- THE TOOL — the hero of the page. app.js renders its UI into #tool. -->
+    <section class="tool-zone">
+      <p class="tool-cue" aria-hidden="true">↓ Enter your details below to start</p>
+      <section id="tool" class="tool" data-keyword="toon-converter" aria-label="JSON to TOON Converter">
+        <noscript>
+          <p class="notice">This tool runs entirely in your browser and needs JavaScript enabled.</p>
+        </noscript>
+        <p class="tool-loading">Loading JSON to TOON Converter…</p>
+      </section>
+    </section>
+
+
+
+    <!-- Secondary, compact supporting content (kept concise; below the tool). -->
+    <div class="details">
+      <section class="howto" aria-label="How to use">
+        <h2>How to use</h2>
+        <ol class="howto-steps">
+        <li>Paste your JSON into the input box, or drop a .json file.</li>
+        <li>The TOON output and the estimated token savings appear automatically.</li>
+        <li>Review the percentage of tokens saved versus the original JSON.</li>
+        <li>Copy or download the TOON to use it in your prompt.</li>
+        </ol>
+      </section>
+
+      <section class="features" aria-label="Features">
+        <h2>Features</h2>
+        <ul class="feature-list">
+        <li>Convert any JSON to TOON (Token-Oriented Object Notation)</li>
+        <li>Tabular encoding of uniform object arrays for maximum token savings</li>
+        <li>Side-by-side token estimate: JSON vs TOON, with percent saved</li>
+        <li>Copy the TOON output or download it</li>
+        <li>Paste text or drop a .json file</li>
+        <li>100% client-side — your data never leaves the browser</li>
+        </ul>
+      </section>
+
+      <section class="faq" aria-label="Frequently asked questions">
+        <h2>FAQ</h2>
+      <details>
+        <summary>What is TOON?</summary>
+        <p>TOON (Token-Oriented Object Notation) is a compact data format designed to represent JSON using fewer LLM tokens. It is indentation-based and encodes arrays of uniform objects as a header plus rows, avoiding repeated keys.</p>
+      </details>
+      <details>
+        <summary>Why convert JSON to TOON?</summary>
+        <p>LLMs charge by token and have limited context windows. TOON conveys the same data in fewer tokens, so you can include more data per prompt and reduce cost — particularly for tabular or list-heavy JSON.</p>
+      </details>
+      <details>
+        <summary>How much do I save?</summary>
+        <p>It depends on your data. Arrays of many similar objects save the most because keys aren&#39;t repeated per row; deeply nested or highly irregular data saves less. The tool shows an estimate for your specific input.</p>
+      </details>
+      <details>
+        <summary>Is my JSON uploaded?</summary>
+        <p>No. Conversion happens entirely in your browser. Your data is never sent to a server, so it&#39;s safe for private payloads.</p>
+      </details>
+      <details>
+        <summary>Is the token count exact?</summary>
+        <p>It&#39;s a close estimate (roughly 4 characters per token), used to compare JSON and TOON on equal footing. Actual counts vary by model tokenizer, but the relative savings are representative.</p>
+      </details>
+      </section>
+
+      <section class="about" aria-label="About">
+      <p>TOON (Token-Oriented Object Notation) is a compact, human-readable way to represent JSON data that uses far fewer tokens — especially for arrays of uniform objects, which it writes as a single header plus tabular rows instead of repeating every key.</p>
+      <p>Paste your JSON and this converter produces the equivalent TOON and shows the estimated token savings, so you can fit more data into a model&#39;s context window for less cost. Everything runs locally in your browser.</p>
+        <p class="privacy-note">🔒 JSON to TOON Converter runs 100% in your browser — nothing is uploaded.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; 2026 JSON to TOON Converter · Built by Tool Factory</p>
+    </div>
+  </footer>
+
+
+  <script src="app.js" defer></script>
+
+</body>
+</html>

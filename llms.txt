@@ -1,0 +1,31 @@
+# JSON to TOON Converter
+
+> Free JSON to TOON converter. Paste JSON to convert it to TOON (Token-Oriented Object Notation) and see how many LLM tokens you save versus raw JSON. Runs entirely in your browser, nothing uploaded.
+
+URL: https://toon-converter.github.io/
+Price: Free. Runs 100% in the browser — no upload, no sign-up.
+
+## Features
+- Convert any JSON to TOON (Token-Oriented Object Notation)
+- Tabular encoding of uniform object arrays for maximum token savings
+- Side-by-side token estimate: JSON vs TOON, with percent saved
+- Copy the TOON output or download it
+- Paste text or drop a .json file
+- 100% client-side — your data never leaves the browser
+
+## FAQ
+### What is TOON?
+TOON (Token-Oriented Object Notation) is a compact data format designed to represent JSON using fewer LLM tokens. It is indentation-based and encodes arrays of uniform objects as a header plus rows, avoiding repeated keys.
+
+### Why convert JSON to TOON?
+LLMs charge by token and have limited context windows. TOON conveys the same data in fewer tokens, so you can include more data per prompt and reduce cost — particularly for tabular or list-heavy JSON.
+
+### How much do I save?
+It depends on your data. Arrays of many similar objects save the most because keys aren't repeated per row; deeply nested or highly irregular data saves less. The tool shows an estimate for your specific input.
+
+### Is my JSON uploaded?
+No. Conversion happens entirely in your browser. Your data is never sent to a server, so it's safe for private payloads.
+
+### Is the token count exact?
+It's a close estimate (roughly 4 characters per token), used to compare JSON and TOON on equal footing. Actual counts vary by model tokenizer, but the relative savings are representative.
+
